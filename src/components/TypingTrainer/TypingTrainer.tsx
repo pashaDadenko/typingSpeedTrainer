@@ -14,7 +14,7 @@ export const TypingTrainer: FC = memo(() => {
 
 	useEffect(() => {
 		if (startTime === null && userInput.length > 0) dispatch(startTyping()); // Запуск таймера при первом вводе текста, если таймер еще не запущен
-		if (userInput.length === text.length) dispatch(endTyping()); // Завершение набора текста и открытие модального окна при завершении ввода текста
+		if (userInput.length === text.length) dispatch(endTyping()); // Завершение набора текста
 	}, [userInput, text, startTime, dispatch]);
 
 	return (
