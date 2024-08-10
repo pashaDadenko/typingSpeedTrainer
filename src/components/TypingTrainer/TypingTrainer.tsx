@@ -10,7 +10,7 @@ import { TextDisplay } from '../TextDisplay/TextDisplay';
 
 export const TypingTrainer: FC = memo(() => {
 	const dispatch = useAppDispatch();
-	const { text, userInput, startTime } = useAppSelector((state) => state.typingSlice);
+	const { text, userInput, startTime, isModalOpen } = useAppSelector((state) => state.typingSlice);
 
 	useEffect(() => {
 		if (startTime === null && userInput.length > 0) dispatch(startTyping()); // Запуск таймера при первом вводе текста, если таймер еще не запущен
@@ -19,10 +19,15 @@ export const TypingTrainer: FC = memo(() => {
 
 	return (
 		<div className={styles.container}>
-			<TextDisplay />
-			<TextInput />
-			<Reset />
-			<Modal />
+			{!isModalOpen ? (
+				<>
+					<TextDisplay />
+					<TextInput />
+					<Reset />
+				</>
+			) : (
+				<Modal />
+			)}
 		</div>
 	);
 });

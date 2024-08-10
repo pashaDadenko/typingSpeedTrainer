@@ -11,6 +11,7 @@ export const TextDisplay: FC = memo(() => {
 		<div className={styles.text}>
 			{text.split('').map((char, index) => {
 				let className = styles.default;
+
 				// Определение состояния символа
 				if (index < userInput.length) {
 					if (userInput[index] === char) {

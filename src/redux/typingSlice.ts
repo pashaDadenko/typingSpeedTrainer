@@ -46,15 +46,18 @@ const typingSlice = createSlice({
 			state.errorMap = newErrorMap;
 			state.errors = Object.keys(newErrorMap).length;
 		},
+
 		// Установка времени начала набора текста
 		startTyping: (state) => {
 			state.startTime = Date.now();
 		},
+
 		// Установка времени окончания набора текста и открытие модального окна
 		endTyping: (state) => {
 			state.endTime = Date.now();
 			state.isModalOpen = true;
 		},
+
 		// Сброс состояния
 		resetGame: (state) => {
 			state.text = getRandomText();
@@ -65,6 +68,7 @@ const typingSlice = createSlice({
 			state.errorMap = {};
 			state.isModalOpen = false;
 		},
+
 		// Переключение видимости модального окна
 		toggleModal: (state, action: PayloadAction<boolean>) => {
 			state.isModalOpen = action.payload;

@@ -7,9 +7,8 @@ import styles from './Modal.module.scss';
 
 export const Modal: FC = memo(() => {
 	const dispatch = useAppDispatch();
-	const { userInput, errors, startTime, endTime, isModalOpen } = useAppSelector((state) => state.typingSlice);
-	// Возвращаем null, если модальное окно закрыто
-	if (!isModalOpen) return null;
+	const { userInput, errors, startTime, endTime } = useAppSelector((state) => state.typingSlice);
+
 	// Вычисление слов в минуту
 	const calculateWPM = () => {
 		if (startTime && endTime) {
@@ -18,6 +17,7 @@ export const Modal: FC = memo(() => {
 		}
 		return 0;
 	};
+
 	// Закрытие модального окна и сброс состояния
 	const handleModalClose = () => {
 		dispatch(toggleModal(false));

@@ -8,6 +8,7 @@ import styles from './Reset.module.scss';
 export const Reset: FC = memo(() => {
 	const dispatch = useAppDispatch();
 	const [isAnimating, setIsAnimating] = useState(false);
+
 	// Обработка клика по кнопке сброса с анимацией вращения
 	const handleRotateClick = useCallback(() => {
 		setIsAnimating(true);

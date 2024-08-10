@@ -7,6 +7,7 @@ import styles from './TextInput.module.scss';
 export const TextInput: FC = memo(() => {
 	const dispatch = useAppDispatch();
 	const { userInput } = useAppSelector((state) => state.typingSlice);
+
 	// Обработка изменений в поле ввода
 	const handleChange = useCallback(
 		(event: ChangeEvent<HTMLInputElement>) => {
