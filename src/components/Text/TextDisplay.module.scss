@@ -1,6 +1,10 @@
 .text {
 	font-size: 1.5rem;
 	margin-bottom: 1rem;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
 }
 
 .correct {
