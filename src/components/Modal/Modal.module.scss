@@ -1,0 +1,52 @@
+.modalOverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #00000080;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.modalContent {
+	width: 500px;
+	background: white;
+	padding: 40px;
+	border-radius: 8px;
+	position: relative;
+}
+
+.title {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.stats {
+	display: flex;
+	justify-content: center;
+	gap: 100px;
+}
+
+.closeButton {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background: transparent;
+	border: none;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+@media (max-width: 768px) {
+	.modalContent {
+		width: 330px;
+		height: 200px;
+		padding: 15px;
+	}
+
+	.title {
+		margin: 50px 0;
+	}
+}
