@@ -2,11 +2,12 @@ import { Modal } from '../Modal/Modal';
 import { Reset } from '../Reset/Reset';
 import { FC, memo, useEffect } from 'react';
 import { TextInput } from '../TextInput/TextInput';
+import { TextDisplay } from '../TextDisplay/TextDisplay';
 import { endTyping, startTyping } from '../../redux/typingSlice';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 
 import styles from './TypingTrainer.module.scss';
-import { TextDisplay } from '../TextDisplay/TextDisplay';
+
 
 export const TypingTrainer: FC = memo(() => {
 	const dispatch = useAppDispatch();
